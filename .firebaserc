@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tictoe-cdae7": {
+      "hosting": {
+        "tictoe": [
+          "tictoe-cdae7"
+        ]
+      }
+    }
+  }
+}

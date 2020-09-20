@@ -1,0 +1,20 @@
+<div class=container>
+    <h1>Current Player: {{player}}</h1>
+    <div>
+        <button (click)="newGame()">Start new Game!</button>
+        <button (click)="setSinglePlayer()" *ngIf="!singlePlayer">Single Player!</button>
+        <button (click)="setSinglePlayer()" *ngIf="singlePlayer" class="selected">Single Player!</button>
+
+        <button (click)="setDifficulty()" *ngIf="difficulty === 0 && singlePlayer" class="begginer">Difficulty</button>
+        <button (click)="setDifficulty()" *ngIf="difficulty === 1 && singlePlayer" class="medium">Difficulty</button>
+        <button (click)="setDifficulty()" *ngIf="difficulty === 2 && singlePlayer" class="hard">Difficulty</button>
+    </div>
+    <h2 *ngIf="winner">
+        Player won the game: {{winner}}
+    </h2>
+
+    <main>
+        <app-square *ngFor="let val of squares; let i= index" [value]="val" (click)="makeMove(i)">
+        </app-square>
+    </main>
+</div>

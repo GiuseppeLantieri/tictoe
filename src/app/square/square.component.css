@@ -1,0 +1,23 @@
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: #b7c1de;
+    color: #fff;
+    font-size: 150px;
+}
+
+.X {
+    background-color: #0b468c;
+}
+
+.O {
+    background-color: #ac61b9;
+}
+
+@media only screen and (max-width: 800px) {
+    .square {
+        width: 100px;
+        height: 100px;
+        font-size: 50px;
+    }
+}
